@@ -2,7 +2,7 @@ function getWeather() {
     document.querySelector(".weather-info").style.display = "block";
     const cityName = document.querySelector("input").value;
     $.ajax({
-        url:`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=b4397e351670510cacd5a62924137601&units=metric`,
+        url:`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=b4397e351670510cacd5a62924137601&units=metric`,
         success: function(data) {
             console.log(data);
 
@@ -33,6 +33,6 @@ function getWeather() {
         }
     });
     $.ajax({
-         url:`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&mode=xml&appid=b4397e351670510cacd5a62924137601`
+         url:`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&mode=xml&appid=b4397e351670510cacd5a62924137601`
     })
 }
