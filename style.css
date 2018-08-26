@@ -1,0 +1,23 @@
+.input-group {
+    margin: 1em auto;
+    max-width: 500px;
+}
+.container {
+    text-align: center;
+}
+.temp {
+    font-size: 4em;
+}
+.description {
+    font-size: 2em;
+}
+.city-name {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.weather-info {
+    display: none;
+}
+#icon {
+    font-size: 3em;
+}
