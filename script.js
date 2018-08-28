@@ -6,20 +6,41 @@ function getWeather() {
         success: function(data) {
             console.log(data);
 
-            // let sunrise = data.sys.sunrise;
-            // let sunset = data.sys.sunset;
-            // let dt = data.dt;
-            // let isNight = dt;
+            let body = document.querySelector("body");
+            let date = new Date();
+            let dayTime = new Date(data.sys.sunrise * 1000);
+            let nightTime = new Date(data.sys.sunset * 1000);
 
-            let isNight = data.sys.sunset;
-
-            if ( isNight === new Date() > data.sys.sunset && new Date() < data.sys.sunrise) {
-                document.querySelector("body").style.backgroundColor = "black";
-                document.querySelector("body").style.color = "white";
+            if (nightTime > date && dayTime < date) {
+                $("body").css("background-color", "orange");
+                $("body").css("color", "black");
             } else {
-                new Date();
-                document.querySelector("body").style.backgroundColor = "orange";
-                document.querySelector("body").style.color = "black";
+                $("body").css("background-color", "black");
+                $("body").css("color", "white");
+            }
+
+            let icon = data.weather[0].main;
+
+            if (icon === 'Smoke') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-smoke"></i>';
+            }
+            else if (icon === 'Clouds') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-cloud"></i>';
+            }
+            else if (icon === 'Rain') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-rain-wind"></i>';
+            }
+            else if (icon === 'Haze') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-day-haze"></i>';
+            }
+            else if (icon === 'Clear') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-clear"></i>';
+            }
+            else if (icon === 'Fog') {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-fog"></i>';
+            }
+            else {
+                document.querySelector(".main-icon").innerHTML='no icon';
             }
 
             document.querySelector(".city-name").innerHTML = data.name;
@@ -33,6 +54,7 @@ function getWeather() {
         }
     });
     $.ajax({
-         url:`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&mode=xml&appid=b4397e351670510cacd5a62924137601`
+         url:`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&mode=xml&appid=b4397e351670510cacd5a62924137601`,
+         
     })
 }
