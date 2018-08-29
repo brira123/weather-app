@@ -24,3 +24,19 @@
 .main-icon {
     font-size: 5em;
 }
+.more-div {
+    display: flex;
+    margin: 1em auto;
+    max-width: 500px;
+    padding: 1em;
+}
+.day-one, .day-two, .day-three, .day-four, .day-five {
+    padding: 1em;
+}
+/* body {
+    background-image: url('images/is3.jpg');
+    background-size: cover;
+} */
+h1 {
+    text-align: center;
+}
