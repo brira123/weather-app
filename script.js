@@ -9,38 +9,48 @@ function getWeather() {
         success: function(data) {
             console.log(data);
 
-            let body = document.querySelector("body");
-            let date = new Date();
-            let dayTime = new Date(data.sys.sunrise * 1000);
-            let nightTime = new Date(data.sys.sunset * 1000);
+            // let body = document.querySelector("body");
+            // let date = new Date();
+            // let dayTime = new Date(data.sys.sunrise * 1000);
+            // let nightTime = new Date(data.sys.sunset * 1000);
 
-            if (nightTime > date && dayTime < date) {
-                $("body").css("background-color", "orange");
-                $("body").css("color", "black");
-            } else {
-                $("body").css("background-color", "black");
-                $("body").css("color", "white");
-            }
+            // if (nightTime > date && dayTime < date) {
+            //     $("body").css("background-image", "url('day.jpg')");
+            //     $("body").css("color", "black");
+            // } else {
+            //     $("body").css("background-image", "url('night.png')");
+            //     $("body").css("color", "white");
+            // }
 
             let icon = data.weather[0].main;
 
             if (icon === 'Smoke') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-smoke"></i>';
+                document.body.style.backgroundImage = "url('https://static.warthunder.ru/upload/image/!2018/02%20February/fog_on_97983d0948653b728a24e4d5b074de65.jpg')";
             }
             else if (icon === 'Clouds') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-cloud"></i>';
+                document.body.style.backgroundImage = "url('http://www.korkep.sk/wp-content/uploads/2018/06/cloudy-weather-2.jpg')";
+                document.body.style.color = "white";
             }
             else if (icon === 'Rain') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-rain-wind"></i>';
+                document.body.style.backgroundImage = "url('http://www.modafinilsale.com/data/out/510/228754527-rainy-weather-desktop-wallpaper.png')";
+                document.body.style.color = "white";
             }
             else if (icon === 'Haze') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-day-haze"></i>';
+                document.body.style.backgroundImage = "url('https://i.imgur.com/kt3aLLc.jpg')";
+                document.body.style.color = "black";
             }
             else if (icon === 'Clear') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-clear"></i>';
+                document.body.style.backgroundImage = "url('images/clear.jpg')";
+                document.body.style.color = "white";
             }
             else if (icon === 'Fog') {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-fog"></i>';
+                document.body.style.backgroundImage = "url('https://images3.alphacoders.com/156/156719.jpg')";
             }
             else {
                 document.querySelector(".main-icon").innerHTML='no icon';
@@ -57,7 +67,7 @@ function getWeather() {
         }
     });
     $.ajax({
-         url:`https://api.openweathermap.org/data/2.5/forecast?q=karachi,pk&appid=b4397e351670510cacd5a62924137601&units=metric`,
+         url:`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=b4397e351670510cacd5a62924137601&units=metric`,
          success: function (data) {
             console.log(data);
          
