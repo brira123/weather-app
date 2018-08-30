@@ -10,6 +10,10 @@
 }
 .description {
     font-size: 2em;
+    font-weight: bold;
+}
+.temp-range{
+    font-weight: bold;
 }
 .city-name {
     letter-spacing: 3px;
@@ -29,12 +33,13 @@
     margin: 1em auto;
     max-width: 500px;
     padding: 1em;
+    font-weight: bold;
 }
 .day-one, .day-two, .day-three, .day-four, .day-five {
     padding: 1em;
 }
 /* body {
-    background-image: url('images/is3.jpg');
+    background-image: url('images/is.jpg');
     background-size: cover;
 } */
 h1 {
