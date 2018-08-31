@@ -83,17 +83,138 @@ function getWeather() {
             document.querySelector(".day4").innerHTML = days[d4.getDay()];  
             document.querySelector(".day5").innerHTML = days[d5.getDay()]; 
     
-            document.querySelector(".date-one").innerHTML = `${months[d1.getMonth()]} ${d1.getDate()}`;        
-            document.querySelector(".date-two").innerHTML = `${months[d2.getMonth()]} ${d2.getDate()}` ;        
-            document.querySelector(".date-three").innerHTML = `${months[d3.getMonth()]} ${d3.getDate()}`;        
-            document.querySelector(".date-four").innerHTML = `${months[d4.getMonth()]} ${d4.getDate()}`;        
-            document.querySelector(".date-five").innerHTML = `${months[d5.getMonth()]} ${d5.getDate()}`;        
+            // document.querySelector(".date-one").innerHTML = `${months[d1.getMonth()]} ${d1.getDate()}`;        
+            // document.querySelector(".date-two").innerHTML = `${months[d2.getMonth()]} ${d2.getDate()}` ;        
+            // document.querySelector(".date-three").innerHTML = `${months[d3.getMonth()]} ${d3.getDate()}`;        
+            // document.querySelector(".date-four").innerHTML = `${months[d4.getMonth()]} ${d4.getDate()}`;        
+            // document.querySelector(".date-five").innerHTML = `${months[d5.getMonth()]} ${d5.getDate()}`; 
     
             document.querySelector(".temperature-one").innerHTML = Math.round(data.list[0].main.temp) + " C°";        
             document.querySelector(".temperature-two").innerHTML = Math.round(data.list[5].main.temp) + " C°";          
             document.querySelector(".temperature-three").innerHTML = Math.round(data.list[13].main.temp) + " C°";         
             document.querySelector(".temperature-four").innerHTML = Math.round(data.list[21].main.temp) + " C°";         
-            document.querySelector(".temperature-five").innerHTML = Math.round(data.list[29].main.temp) + " C°";      
+            document.querySelector(".temperature-five").innerHTML = Math.round(data.list[29].main.temp) + " C°";  
+
+            let Icon1 = data.list[0].weather[0].main;
+
+                if (Icon1 == "Clear") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-night-clear"></i>`
+                }
+                else if (Icon1 == "Clouds") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-cloud"></i>`
+                }
+                else if (Icon1 == "Rain") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-rain"></i>`
+                }
+                else if (Icon1 == "Haze") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-dust"></i>`
+                }
+                else if (Icon1 == "Fog") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-night-fog"></i>`
+                }
+                else if (Icon1 == "Smoke") {
+                    document.querySelector(".icon-one").innerHTML = `<i class="wi wi-smoke"></i>`
+                }
+                else {
+                    document.querySelector(".icon-one").innerHTML='no icon';
+                }
+
+            let Icon2 = data.list[16].weather[0].main;
+
+                if (Icon2 == "Clear") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-night-clear"></i>`
+                }
+                else if (Icon2 == "Clouds") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-cloud"></i>`
+                }
+                else if (Icon2 == "Rain") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-rain"></i>`
+                }
+                else if (Icon2 == "Haze") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-dust"></i>`
+                }
+                else if (Icon2 == "Fog") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-night-fog"></i>`
+                }
+                else if (Icon2 == "Smoke") {
+                    document.querySelector(".icon-two").innerHTML = `<i class="wi wi-smoke"></i>`
+                }
+                else {
+                    document.querySelector(".icon-two").innerHTML='no icon';
+                }
+
+            let Icon3 = data.list[24].weather[0].main;
+
+                if (Icon2 == "Clear") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-night-clear"></i>`
+                }
+                else if (Icon2 == "Clouds") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-cloud"></i>`
+                }
+                else if (Icon2 == "Rain") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-rain"></i>`
+                }
+                else if (Icon2 == "Haze") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-dust"></i>`
+                }
+                else if (Icon2 == "Fog") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-night-fog"></i>`
+                }
+                else if (Icon2 == "Smoke") {
+                    document.querySelector(".icon-three").innerHTML = `<i class="wi wi-smoke"></i>`
+                }
+                else {
+                    document.querySelector(".icon-three").innerHTML='no icon';
+                }
+
+            let Icon4 = data.list[24].weather[0].main;
+
+            if (Icon4 == "Clear") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-night-clear"></i>`
+            }
+            else if (Icon4 == "Clouds") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-cloud"></i>`
+            }
+            else if (Icon4 == "Rain") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-rain"></i>`
+            }
+            else if (Icon4 == "Haze") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-dust"></i>`
+            }
+            else if (Icon4 == "Fog") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-night-fog"></i>`
+            }
+            else if (Icon4 == "Smoke") {
+                document.querySelector(".icon-four").innerHTML = `<i class="wi wi-smoke"></i>`
+            }
+            else {
+                document.querySelector(".icon-four").innerHTML='no icon';
+            }
+
+            let Icon5 = data.list[24].weather[0].main;
+
+                if (Icon5 == "Clear") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-night-clear"></i>`
+                }
+                else if (Icon5 == "Clouds") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-cloud"></i>`
+                }
+                else if (Icon5 == "Rain") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-rain"></i>`
+                }
+                else if (Icon5 == "Haze") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-dust"></i>`
+                }
+                else if (Icon5 == "Fog") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-night-fog"></i>`
+                }
+                else if (Icon5 == "Smoke") {
+                    document.querySelector(".icon-five").innerHTML = `<i class="wi wi-smoke"></i>`
+                }
+                else {
+                    document.querySelector(".icon-five").innerHTML='no icon';
+                }
+
         },
         error: function(error){
             console.log(error)
