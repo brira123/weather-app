@@ -30,6 +30,9 @@
 }
 .more-div {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 1em auto;
     max-width: 500px;
     padding: 1em;
@@ -38,10 +41,15 @@
 .day-one, .day-two, .day-three, .day-four, .day-five {
     padding: 1em;
 }
-/* body {
-    background-image: url('images/is.jpg');
-    background-size: cover;
-} */
+body {
+    background-image: url('images/ui.jpg');
+}
 h1 {
     text-align: center;
+}
+.heading {
+    color: white;
+}
+.icon-one, .icon-two, .icon-three, .icon-four, .icon-five {
+    font-size: 2em;
 }
