@@ -2,7 +2,7 @@
 
 Page link: https://brira123.github.io/weather-app/
 
-## This App can make by using the following links:
+## This App developed by using the following links:
 
 OpenWeatherMap: https://openweathermap.org/city
 
