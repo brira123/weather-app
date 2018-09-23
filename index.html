@@ -31,56 +31,58 @@
     <script src="script.js"></script>
 </head>
 <body>
-  <h1 class="heading">WEATHER APP</h1>
+        <a href="https://github.com/brira123/weather-app"><i id="git" class="fab fa-github"></i></a>
     <div class="container">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username" aria-describedby="basic-addon2"
-        onkeydown = "if (event.keyCode == 13) document.getElementById('btnSearch').click()">
-        <div class="input-group-append" onclick="getWeather()">
-          <span class="input-group-text btn btn-outline-dark" id="btnSearch"><i class="fas fa-search"></i></span>
+            <div class="main">
+            <h1 class="heading">WEATHER APP</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username" aria-describedby="basic-addon2"
+            onkeydown = "if (event.keyCode == 13) document.getElementById('btnSearch').click()">
+            <div class="input-group-append" onclick="getWeather()">
+            <span class="input-group-text btn btn-outline-dark" id="btnSearch"><i class="fas fa-search"></i></span>
+            </div>
         </div>
-      </div>
-      <div class="weather-info">
-        <h1 class="city-name"></h1>
-        <i class="main-icon"></i>
-        <h3 class="temp"><span></span>°</h3>
-        <p class="description"></p>
-        <p class="temp-range"><span class="min"></span>°/<span class="max"></span> °</p>
-
-        <div class="more-div">
-
-          <div class="day-one">
-              <p class="day1"></p>
-              <i class="icon-one"></i>
-              <p class="temperature-one"> C°</p>
-          </div> 
-
-          <div class="day-two">
-              <p class="day2"></p>
-              <i class="icon-two"></i>
-              <p class="temperature-two"> C°</p>
-          </div>
-
-          <div class="day-three">
-              <p class="day3"></p>
-              <i class="icon-three"></i>
-              <p class="temperature-three"> C°</p>
-          </div>
-
-          <div class="day-four">
-              <p class="day4"></p>
-              <i class="icon-four"></i>
-              <p class="temperature-four"> C°</p>
-          </div>
-
-          <div class="day-five">
-              <p class="day5"></p>
-              <i class="icon-five"></i>
-              <p class="temperature-five"> C°</p>
-          </div>
         </div>
-      </div>
-  </div>
-</div>
+        <div class="weather-info">
+            <h1 class="city-name"></h1>
+            <i class="main-icon"></i>
+            <h3 class="temp"><span></span>°</h3>
+            <p class="description"></p>
+            <p class="temp-range"><span class="min"></span>°/<span class="max"></span> °</p>
+
+            <div class="more-div">
+
+                <div class="day-one">
+                    <p class="day1"></p>
+                    <i class="icon-one"></i>
+                    <p class="temperature-one"> C°</p>
+                </div> 
+
+                <div class="day-two">
+                    <p class="day2"></p>
+                    <i class="icon-two"></i>
+                    <p class="temperature-two"> C°</p>
+                </div>
+
+                <div class="day-three">
+                    <p class="day3"></p>
+                    <i class="icon-three"></i>
+                    <p class="temperature-three"> C°</p>
+                </div>
+
+                <div class="day-four">
+                    <p class="day4"></p>
+                    <i class="icon-four"></i>
+                    <p class="temperature-four"> C°</p>
+                </div>
+
+                <div class="day-five">
+                    <p class="day5"></p>
+                    <i class="icon-five"></i>
+                    <p class="temperature-five"> C°</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
