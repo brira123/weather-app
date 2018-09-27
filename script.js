@@ -4,6 +4,7 @@ var months = ["January","February","March","April","May","June","July","August",
 function getWeather() {
     document.querySelector(".weather-info").style.display = "block";
     const cityName = document.querySelector("input").value;
+    document.querySelector(".quote").style.display = "none";
     $.ajax({
         url:`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=b4397e351670510cacd5a62924137601&units=metric`,
         success: function(data) {
